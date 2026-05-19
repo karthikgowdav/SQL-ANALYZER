@@ -49,17 +49,88 @@ Docker PostgreSQL Container
 Persistent Docker Volume
 
 ---
+# Team Setup Notes
 
-# Prerequisites
+Every teammate should:
 
-Before running the project, install:
+1. Install Docker Desktop
+2. Install Java JDK
+3. Clone repository
+4. Run docker compose up -d
+5. Compile and run Java project
 
-- Java JDK 21 or above
-- Docker Desktop
-- Git
-- VS Code (Recommended)
+No local PostgreSQL installation is required.
+
+# SQL ANALYZER - Project Setup Guide
+# Required Software
+
+Before running the project, install the following software:
+
+## 1. Java JDK
+
+Install Java JDK 21 or above.
+
+Check installation:
+
+```bash
+java --version
+```
 
 ---
+
+## 2. Docker Desktop
+
+Install Docker Desktop and make sure Docker is running.
+
+Check installation:
+
+```bash
+docker --version
+```
+
+---
+# Docker Configuration
+
+The PostgreSQL database runs using Docker Compose.
+
+## Port Mapping
+
+Host Machine:
+5434
+
+Docker Container:
+5432
+
+## JDBC URL
+
+```java
+jdbc:postgresql://localhost:5434/sql_visualizer
+```
+
+---
+
+## 3. Git
+
+Install Git.
+
+Check installation:
+
+```bash
+git --version
+```
+
+---
+
+## 4. VS Code (Recommended)
+
+Install:
+
+- VS Code
+- Java Extension Pack
+- PostgreSQL Extension (Optional)
+
+---
+
 
 # How to Run the Project
 
@@ -103,25 +174,7 @@ java -cp "lib/postgresql-42.7.11.jar;src" SQLVisualizerUI
 
 ---
 
-# Docker Configuration
 
-The PostgreSQL database runs using Docker Compose.
-
-## Port Mapping
-
-Host Machine:
-5434
-
-Docker Container:
-5432
-
-## JDBC URL
-
-```java
-jdbc:postgresql://localhost:5434/sql_visualizer
-```
-
----
 
 # Features
 
@@ -146,17 +199,7 @@ jdbc:postgresql://localhost:5434/sql_visualizer
 
 ---
 
-# Team Setup Notes
 
-Every teammate should:
-
-1. Install Docker Desktop
-2. Install Java JDK
-3. Clone repository
-4. Run docker compose up -d
-5. Compile and run Java project
-
-No local PostgreSQL installation is required.
 
 ---
 
